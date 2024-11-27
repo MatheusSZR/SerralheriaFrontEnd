@@ -24,19 +24,36 @@
 
     <main>
         <h2>Solicite seu Orçamento</h2>
-        <p>Preencha o formulário abaixo e entraremos em contato com o orçamento para o serviço desejado.</p>
 
-        <form action="#" method="POST">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <input type="tel" name="telefone" placeholder="Seu Telefone" required>
-            <textarea name="mensagem" placeholder="Descreva o serviço desejado" rows="4" required></textarea>
-            <button type="submit">Solicitar Orçamento</button>
-        </form>
+        <!-- Botão para abrir o modal -->
+        <button id="openModalBtn">Abrir Cadastro</button>
+
+        <!-- O Modal -->
+        <div id="cadastroModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Cadastro de Orçamento</h3>
+                <form action="processar_orcamento.php" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <button type="submit">Enviar Orçamento</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; Trabalho de desenvolvimento front end - Matheus de Souza Rodrigues</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
+
