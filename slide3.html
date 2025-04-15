@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore os produtos da Serralheria Rodrigues, incluindo portões de ferro, grades de segurança e cercas de aço sob medida.">
+    <meta name="keywords" content="produtos, serralheria, portões de ferro, grades de segurança, cercas de aço, sob medida, Serralheria Rodrigues">
+    <meta name="author" content="Matheus de Souza Rodrigues">
     <title>Produtos - Serralheria Rodrigues</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,12 +13,12 @@
     <header>
         <div class="container">
             <h1>Serralheria Rodrigues</h1>
-            <nav>
+            <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="slide1.html">Serviços</a></li>
                     <li><a href="slide2.html">Orçamento</a></li>
-                    <li><a href="slide3.html">Produtos</a></li>
+                    <li><a href="slide3.html" aria-current="page">Produtos</a></li>
                     <li><a href="slide4.html">Galeria</a></li>
                 </ul>
             </nav>
@@ -23,38 +26,45 @@
     </header>
 
     <main>
-        <h2>Produtos da Serralheria Rodrigues</h2>
-        <div class="feature">
-            <!-- Produto 1 -->
+        <section>
+            <h2>Produtos da Serralheria Rodrigues</h2>
+            <p>Confira nossos produtos de alta qualidade e feitos sob medida para atender às suas necessidades.</p>
+        </section>
+
+        <section class="feature" aria-labelledby="produtos-lista">
+            <h2 id="produtos-lista">Destaques dos Produtos</h2>
             <div class="card">
-                <img src="midias/imagem/portao1.jpg.jpg" alt="Portão de Ferro">
+                <img src="midias/imagem/portao1.jpg.jpg" alt="Portão de ferro resistente e personalizado">
                 <h3>Portão de Ferro Sob Medida</h3>
                 <p>Portões de ferro feitos sob medida, resistentes e duráveis.</p>
             </div>
-            <!-- Produto 2 -->
             <div class="card">
-                <img src="midias/imagem/gradedesegurança.jpg" alt="Grade de Segurança">
+                <img src="midias/imagem/gradedesegurança.jpg" alt="Grades de segurança reforçadas para proteção residencial">
                 <h3>Grades de Segurança</h3>
                 <p>Grades de segurança personalizadas para proteger sua casa.</p>
             </div>
-            <!-- Produto 3 -->
             <div class="card">
-                <img src="midias/imagem/cerca1.jpg" alt="Cerca de Aço">
+                <img src="midias/imagem/cerca1.jpg" alt="Cerca de aço de alta resistência para segurança">
                 <h3>Cerca de Aço</h3>
                 <p>Cercas de aço de alta resistência para sua segurança.</p>
             </div>
-        </div>
-
-        <!-- Seção de vídeo explicativo -->
-        <section>
-            <h2>Assista ao nosso vídeo sobre os produtos</h2>
-            <iframe width="560" height="315" src="https://www.bing.com/ck/a?!&&p=60e009b44cf1a9b971331aae5778b7b66f41753f9bc57af6daba105eed86701cJmltdHM9MTczMjY2NTYwMA&ptn=3&ver=2&hsh=4&fclid=133e01e3-b277-6d9e-19f2-14e0b3ae6cac&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9c2VycmFsaGVyaWEreW91dHViZSZtaWQ9REY4M0U4RTU3ODZGODQ0QzhCNkVERjgzRThFNTc4NkY4NDRDOEI2RSZGT1JNPVZJUkU&ntb=1" frameborder="0" allowfullscreen></iframe>
         </section>
 
+        <section aria-labelledby="video-explicativo">
+            <h2 id="video-explicativo">Assista ao nosso vídeo sobre os produtos</h2>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/EXEMPLO" 
+                title="Vídeo explicativo sobre os produtos da Serralheria Rodrigues" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; Trabalho de desenvolvimento front end - Matheus de Souza Rodrigues</p>
+        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
     </footer>
 </body>
 </html>
