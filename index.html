@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bem-vindo à Serralheria Rodrigues. Explore nossos serviços, produtos e solicite um orçamento personalizado.">
+    <meta name="keywords" content="serralheria, portões, grades, cercas, produtos de ferro, serviços de serralheria">
+    <meta name="author" content="Matheus de Souza Rodrigues">
     <title>Serralheria Rodrigues</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="midias/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Serralheria Rodrigues</h1>
-            <nav>
+            <nav aria-label="Menu principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
                     <li><a href="slide1.html">Serviços</a></li>
                     <li><a href="slide2.html">Orçamento</a></li>
                     <li><a href="slide3.html">Produtos</a></li>
@@ -23,32 +28,33 @@
     </header>
 
     <main>
-        <div class="welcome">
+        <section class="welcome">
             <h2>Bem-vindo à Serralheria Rodrigues!</h2>
             <p>Fornecemos soluções em ferro e aço para o que você precisa. Explore nossos serviços e obtenha o melhor preço para sua obra!</p>
-        </div>
+        </section>
 
-        <div class="feature">
+        <section class="feature" aria-labelledby="produtos-destaque">
+            <h2 id="produtos-destaque">Nossos Destaques</h2>
             <div class="card">
-                <img src="midias/imagem/portao1.jpg.jpg" alt="Portão de Ferro">
+                <img src="midias/imagem/portao1.jpg.jpg" alt="Portão de ferro sob medida">
                 <h3>Portões Sob Medida</h3>
                 <p>Portões de ferro feitos sob medida para sua casa ou empresa.</p>
             </div>
             <div class="card">
-                <img src="midias/imagem/grade1.jpg" alt="Grades de Segurança">
+                <img src="midias/imagem/grade1.jpg" alt="Grades de segurança reforçadas">
                 <h3>Grades de Segurança</h3>
                 <p>Grades de segurança reforçadas para proteger o seu imóvel.</p>
             </div>
             <div class="card">
-                <img src="midias/imagem/cerca1.jpg" alt="Cercas de Aço">
+                <img src="midias/imagem/cerca1.jpg" alt="Cercas de aço resistentes">
                 <h3>Cercas de Aço</h3>
                 <p>Fazemos cercas resistentes e de alta durabilidade para qualquer tipo de necessidade.</p>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; Trabalho de desenvolvimento front end - Matheus de Souza Rodrigues</p>
+        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
     </footer>
 </body>
 </html>
