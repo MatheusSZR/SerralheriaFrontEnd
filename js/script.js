@@ -1,32 +1,58 @@
 // Script para modal de cadastro de orçamento
-// Obtém os elementos do modal, botão de abrir e o botão de fechar
-var modal = document.getElementById("cadastroModal");
-var btn = document.getElementById("openModalBtn");
-var span = document.getElementsByClassName("close")[0];
+(function () {
+    // Obtém os elementos do modal, botão de abrir e o botão de fechar
+    const modal = document.getElementById("cadastroModal");
+    const openModalBtn = document.getElementById("openModalBtn");
+    const closeModalBtn = document.querySelector(".close");
 
-// Ao clicar no botão de "Cadastrar Orçamento", abre o modal
-btn.onclick = function() {
-    modal.style.display = "flex"; // Torna o modal visível
-}
+    // Função para abrir o modal
+    const openModal = () => {
+        modal.style.display = "flex"; // Torna o modal visível
+        modal.setAttribute("aria-hidden", "false"); // Acessibilidade: modal visível
+        openModalBtn.setAttribute("aria-expanded", "true"); // Atualiza estado do botão
+    };
 
-// Fechar o modal ao clicar no 'X'
-span.onclick = function() {
-    modal.style.display = "none"; // Esconde o modal
-}
-
-// Fechar o modal clicando fora dele
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // Função para fechar o modal
+    const closeModal = () => {
         modal.style.display = "none"; // Esconde o modal
-    }
-}
+        modal.setAttribute("aria-hidden", "true"); // Acessibilidade: modal escondido
+        openModalBtn.setAttribute("aria-expanded", "false"); // Atualiza estado do botão
+    };
+
+    // Abrir o modal ao clicar no botão
+    openModalBtn.addEventListener("click", openModal);
+
+    // Fechar o modal ao clicar no botão de fechar
+    closeModalBtn.addEventListener("click", closeModal);
+
+    // Fechar o modal ao clicar fora dele
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Fechar o modal com a tecla "Esc"
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.style.display === "flex") {
+            closeModal();
+        }
+    });
+})();
 
 // Script para o efeito de zoom nas imagens da galeria
-document.querySelectorAll('.zoom').forEach(item => {
-    item.addEventListener('click', function() {
-        this.style.transform = 'scale(1.5)';
-        setTimeout(() => {
-            this.style.transform = 'scale(1)';
-        }, 2000);
+(function () {
+    const galleryImages = document.querySelectorAll(".zoom");
+
+    // Adiciona o evento de clique para aplicar o efeito de zoom
+    galleryImages.forEach((image) => {
+        image.addEventListener("click", () => {
+            image.style.transform = "scale(1.5)";
+            image.style.transition = "transform 0.3s ease";
+
+            setTimeout(() => {
+                image.style.transform = "scale(1)";
+            }, 2000);
+        });
     });
-});
+})();
