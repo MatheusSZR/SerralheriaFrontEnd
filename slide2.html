@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicite seu orçamento personalizado na Serralheria Rodrigues. Envie seu pedido de forma simples e rápida.">
+    <meta name="keywords" content="orçamento, serralheria, portões, grades, produtos de ferro, serviços de serralheria">
+    <meta name="author" content="Matheus de Souza Rodrigues">
     <title>Orçamento - Serralheria Rodrigues</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,11 +13,11 @@
     <header>
         <div class="container">
             <h1>Serralheria Rodrigues</h1>
-            <nav>
+            <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="slide1.html">Serviços</a></li>
-                    <li><a href="slide2.html">Orçamento</a></li>
+                    <li><a href="slide2.html" aria-current="page">Orçamento</a></li>
                     <li><a href="slide3.html">Produtos</a></li>
                     <li><a href="slide4.html">Galeria</a></li>
                 </ul>
@@ -23,25 +26,28 @@
     </header>
 
     <main>
-        <h2>Solicite seu Orçamento</h2>
+        <section aria-labelledby="solicitar-orcamento">
+            <h2 id="solicitar-orcamento">Solicite seu Orçamento</h2>
+            <p>Na Serralheria Rodrigues, você pode solicitar seu orçamento de forma simples e rápida. Basta preencher o formulário abaixo.</p>
+        </section>
 
         <!-- Botão para abrir o modal -->
-        <button id="openModalBtn">Abrir Cadastro</button>
+        <button id="openModalBtn" aria-controls="cadastroModal" aria-expanded="false">Abrir Cadastro</button>
 
-        <!-- O Modal -->
-        <div id="cadastroModal" class="modal">
+        <!-- Modal -->
+        <div id="cadastroModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h3>Cadastro de Orçamento</h3>
+                <button class="close" aria-label="Fechar modal">&times;</button>
+                <h3 id="modalTitle">Cadastro de Orçamento</h3>
                 <form action="processar_orcamento.php" method="POST">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <textarea id="mensagem" name="mensagem" placeholder="Descreva o que você precisa" required></textarea>
 
                     <button type="submit">Enviar Orçamento</button>
                 </form>
@@ -50,10 +56,9 @@
     </main>
 
     <footer>
-        <p>&copy; Trabalho de desenvolvimento front end - Matheus de Souza Rodrigues</p>
+        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
 </html>
-
