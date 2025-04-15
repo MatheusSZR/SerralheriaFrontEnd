@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os serviços oferecidos pela Serralheria Rodrigues.">
+    <meta name="keywords" content="serralheria, serviços, portões, grades, estruturas metálicas">
+    <meta name="author" content="Matheus de Souza Rodrigues">
     <title>Serviços - Serralheria Rodrigues</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,10 +13,10 @@
     <header>
         <div class="container">
             <h1>Serralheria Rodrigues</h1>
-            <nav>
+            <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="slide1.html">Serviços</a></li>
+                    <li><a href="slide1.html" aria-current="page">Serviços</a></li>
                     <li><a href="slide2.html">Orçamento</a></li>
                     <li><a href="slide3.html">Produtos</a></li>
                     <li><a href="slide4.html">Galeria</a></li>
@@ -23,39 +26,42 @@
     </header>
 
     <main>
-        <h2>Serviços da Serralheria Rodrigues</h2>
-        <p>Oferecemos uma ampla gama de serviços em ferro e aço. Confira abaixo alguns dos nossos principais serviços:</p>
+        <section>
+            <h2>Serviços da Serralheria Rodrigues</h2>
+            <p>Oferecemos uma ampla gama de serviços em ferro e aço. Confira abaixo alguns dos nossos principais serviços:</p>
+        </section>
 
-        <div class="feature">
-            <!-- Card 1 - Portões de Ferro -->
+        <section class="feature" aria-labelledby="servicos-principais">
+            <h2 id="servicos-principais">Nossos Serviços</h2>
+            <!-- Card 1 -->
             <div class="card">
-                <img src="midias/imagem/portaodeferro.jpg" alt="Portão de Ferro">
+                <img src="midias/imagem/portaodeferro.jpg" alt="Portão de ferro personalizado">
                 <h3>Portões de Ferro Sob Medida</h3>
                 <p>Fabricamos portões personalizados de ferro, para garantir segurança e beleza para sua residência ou empresa.</p>
             </div>
-            <!-- Card 2 - Grades de Segurança -->
+            <!-- Card 2 -->
             <div class="card">
-                <img src="midias/imagem/gradedesegurança.jpg" alt="Grade de Segurança">
+                <img src="midias/imagem/gradedesegurança.jpg" alt="Grade de segurança reforçada">
                 <h3>Grades de Segurança</h3>
                 <p>Instalação de grades de segurança, ideais para proteger o seu imóvel sem perder a estética.</p>
             </div>
-            <!-- Card 3 - Estruturas Metálicas -->
+            <!-- Card 3 -->
             <div class="card">
-                <img src="midias/imagem/estruturas.jpg" alt="Estruturas Metálicas">
+                <img src="midias/imagem/estruturas.jpg" alt="Estruturas metálicas para obras civis">
                 <h3>Estruturas Metálicas</h3>
                 <p>Construímos estruturas metálicas de alta resistência para obras civis e industriais.</p>
             </div>
-            <!-- Card 4 - Reparos e Manutenção -->
+            <!-- Card 4 -->
             <div class="card">
-                <img src="midias/imagem/reparo.jpg" alt="Reparo de Serralheria">
+                <img src="midias/imagem/reparo.jpg" alt="Serviço de reparos e manutenção em ferro">
                 <h3>Reparos e Manutenção</h3>
                 <p>Realizamos reparos e manutenção em estruturas de ferro, garantindo a durabilidade e segurança.</p>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; Trabalho de desenvolvimento front end - Matheus de Souza Rodrigues.</p>
+        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
     </footer>
 </body>
 </html>
