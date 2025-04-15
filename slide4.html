@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a galeria de imagens da Serralheria Rodrigues e veja nossos produtos em ação, incluindo portões, grades e cercas.">
+    <meta name="keywords" content="galeria, imagens, portões, grades, cercas, serralheria, produtos">
+    <meta name="author" content="Matheus de Souza Rodrigues">
     <title>Galeria - Serralheria Rodrigues</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -20,11 +23,12 @@
             max-width: 300px;
             border-radius: 8px;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery img:hover {
             transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         /* Estilos para a imagem em tamanho maior (modal) */
@@ -39,6 +43,13 @@
             background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
         }
 
         .modal-content {
@@ -59,6 +70,11 @@
             font-size: 30px;
             color: white;
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #ff6b6b;
         }
     </style>
 </head>
@@ -66,13 +82,13 @@
     <header>
         <div class="container">
             <h1>Serralheria Rodrigues</h1>
-            <nav>
+            <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="slide1.html">Serviços</a></li>
                     <li><a href="slide2.html">Orçamento</a></li>
                     <li><a href="slide3.html">Produtos</a></li>
-                    <li><a href="slide4.html">Galeria</a></li>
+                    <li><a href="slide4.html" aria-current="page">Galeria</a></li>
                 </ul>
             </nav>
         </div>
@@ -80,26 +96,44 @@
 
     <main>
         <h2>Galeria de Imagens</h2>
+        <p>Veja abaixo alguns dos nossos projetos realizados. Clique nas imagens para ampliá-las.</p>
         <div class="gallery">
             <!-- Imagens da galeria -->
-            <img src="midias/imagem/portaodeferro.jpg" alt="Portão de Ferro" onclick="openModal(this)">
-            <img src="midias/imagem/grade1.jpg" alt="Grade de Segurança" onclick="openModal(this)">
-            <img src="midias/imagem/cerca1.jpg" alt="Cerca de Aço" onclick="openModal(this)">
+            <img src="midias/imagem/portaodeferro.jpg" alt="Portão de Ferro personalizado" onclick="openModal(this)">
+            <img src="midias/imagem/grade1.jpg" alt="Grade de Segurança reforçada" onclick="openModal(this)">
+            <img src="midias/imagem/cerca1.jpg" alt="Cerca de Aço resistente" onclick="openModal(this)">
             <!-- Adicione mais imagens conforme necessário -->
         </div>
     </main>
 
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
+    <div id="myModal" class="modal" role="dialog" aria-labelledby="modalImg" aria-hidden="true">
+        <span class="close" onclick="closeModal()" aria-label="Fechar modal">&times;</span>
         <div class="modal-content">
-            <img id="modalImg" src="" alt="">
+            <img id="modalImg" src="" alt="Imagem ampliada">
         </div>
     </div>
 
     <footer>
-        <p>&copy; Trabalho de desenvolvimento front end - Matheus de Souza Rodrigues.</p>
+        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Script para abrir modal
+        function openModal(element) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            modalImg.src = element.src;
+            modalImg.alt = element.alt;
+            modal.classList.add("show");
+            modal.setAttribute("aria-hidden", "false");
+        }
+
+        // Script para fechar modal
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.classList.remove("show");
+            modal.setAttribute("aria-hidden", "true");
+        }
+    </script>
 </body>
 </html>
