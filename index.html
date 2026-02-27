@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bem-vindo à Serralheria Rodrigues. Explore serviços, produtos e solicite um orçamento personalizado." />
-  <meta name="keywords" content="serralheria, portões, grades, cercas, produtos de ferro, serviços de serralheria" />
+  <meta name="description" content="Serralheria Rodrigues: serviços e produtos em ferro e aço com qualidade, segurança e acabamento profissional." />
+  <meta name="keywords" content="serralheria, portões, grades, cercas, estrutura metálica, orçamento" />
   <meta name="author" content="Matheus de Souza Rodrigues" />
-  <title>Serralheria Rodrigues</title>
+  <title>Serralheria Rodrigues | Início</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="midias/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
   <header class="site-header">
-    <div class="container">
+    <div class="container nav-wrap">
       <h1 class="brand">Serralheria Rodrigues</h1>
       <nav aria-label="Menu principal" class="main-nav">
         <ul>
@@ -28,38 +27,40 @@
     </div>
   </header>
 
-  <main id="conteudo-principal">
-    <section class="hero" aria-labelledby="titulo-boas-vindas">
-      <div class="container">
-        <h2 id="titulo-boas-vindas">Soluções em ferro e aço com qualidade profissional</h2>
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Soluções em ferro e aço</p>
+        <h2>Projetos sob medida com segurança, durabilidade e acabamento premium</h2>
         <p>
-          Desenvolvemos projetos sob medida para residências e empresas, com foco em segurança,
-          acabamento e durabilidade.
+          Atendemos residências e empresas com fabricação e instalação de portões,
+          grades, cercas e estruturas metálicas.
         </p>
-        <a href="slide2.html" class="cta">Solicitar orçamento</a>
+        <div class="actions">
+          <a class="btn btn-primary" href="slide2.html">Solicitar orçamento</a>
+          <a class="btn btn-ghost" href="slide1.html">Ver serviços</a>
+        </div>
       </div>
     </section>
 
-    <section class="feature" aria-labelledby="produtos-destaque">
+    <section class="section">
       <div class="container">
-        <h2 id="produtos-destaque">Nossos destaques</h2>
+        <h2>Nossos destaques</h2>
         <div class="cards-grid">
           <article class="card">
-            <img src="midias/imagem/portao1.jpg.jpg" alt="Portão de ferro sob medida" loading="lazy" />
-            <h3>Portões sob medida</h3>
-            <p>Projetos personalizados para combinar segurança, funcionalidade e estilo.</p>
+            <img src="midias/imagem/portao1.jpg" alt="Portão de ferro sob medida" loading="lazy" />
+            <h3>Portões Sob Medida</h3>
+            <p>Modelos personalizados para combinar segurança, praticidade e design.</p>
           </article>
-
           <article class="card">
-            <img src="midias/imagem/grade1.jpg" alt="Grades de segurança reforçadas" loading="lazy" />
-            <h3>Grades de segurança</h3>
+            <img src="midias/imagem/grade1.jpg" alt="Grade de segurança reforçada" loading="lazy" />
+            <h3>Grades de Segurança</h3>
             <p>Estruturas reforçadas para proteger seu imóvel com ótimo acabamento.</p>
           </article>
-
           <article class="card">
-            <img src="midias/imagem/cerca1.jpg" alt="Cercas de aço resistentes" loading="lazy" />
-            <h3>Cercas de aço</h3>
-            <p>Soluções resistentes e duráveis para diferentes tipos de terreno e uso.</p>
+            <img src="midias/imagem/cerca1.jpg" alt="Cerca de aço resistente" loading="lazy" />
+            <h3>Cercas de Aço</h3>
+            <p>Soluções robustas para delimitação e proteção de áreas externas.</p>
           </article>
         </div>
       </div>
@@ -67,7 +68,11 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
+    <div class="container">
+      <p>&copy; 2026 Serralheria Rodrigues. Todos os direitos reservados.</p>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
