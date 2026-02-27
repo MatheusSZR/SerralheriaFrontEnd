@@ -1,70 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore os produtos da Serralheria Rodrigues, incluindo portões de ferro, grades de segurança e cercas de aço sob medida.">
-    <meta name="keywords" content="produtos, serralheria, portões de ferro, grades de segurança, cercas de aço, sob medida, Serralheria Rodrigues">
-    <meta name="author" content="Matheus de Souza Rodrigues">
-    <title>Produtos - Serralheria Rodrigues</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conheça os produtos da Serralheria Rodrigues: portões, grades e cercas com fabricação sob medida." />
+  <meta name="keywords" content="produtos serralheria, portão de ferro, grades, cercas" />
+  <meta name="author" content="Matheus de Souza Rodrigues" />
+  <title>Serralheria Rodrigues | Produtos</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Serralheria Rodrigues</h1>
-            <nav aria-label="Menu principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="slide1.html">Serviços</a></li>
-                    <li><a href="slide2.html">Orçamento</a></li>
-                    <li><a href="slide3.html" aria-current="page">Produtos</a></li>
-                    <li><a href="slide4.html">Galeria</a></li>
-                </ul>
-            </nav>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">Serralheria Rodrigues</h1>
+      <nav aria-label="Menu principal" class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="slide1.html">Serviços</a></li>
+          <li><a href="slide2.html">Orçamento</a></li>
+          <li><a href="slide3.html" aria-current="page">Produtos</a></li>
+          <li><a href="slide4.html">Galeria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="section">
+    <div class="container">
+      <h2>Destaques de Produtos</h2>
+      <p class="lead">Produtos fabricados com materiais de qualidade e acabamento profissional.</p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <img src="midias/imagem/portao1.jpg" alt="Portão de ferro resistente e personalizado" loading="lazy" />
+          <h3>Portão de Ferro</h3>
+          <p>Estrutura reforçada e design adaptado ao estilo da sua fachada.</p>
+        </article>
+
+        <article class="card">
+          <img src="midias/imagem/gradedesegurança.jpg" alt="Grades de segurança para proteção residencial" loading="lazy" />
+          <h3>Grades de Segurança</h3>
+          <p>Modelos personalizados para portas, janelas e muros.</p>
+        </article>
+
+        <article class="card">
+          <img src="midias/imagem/cerca1.jpg" alt="Cerca de aço para proteção de terrenos" loading="lazy" />
+          <h3>Cerca de Aço</h3>
+          <p>Resistência e longa vida útil para áreas residenciais e comerciais.</p>
+        </article>
+      </div>
+
+      <section class="video-box" aria-labelledby="video-explicativo">
+        <h3 id="video-explicativo">Vídeo explicativo</h3>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vídeo explicativo sobre produtos"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
-    </header>
+      </section>
+    </div>
+  </main>
 
-    <main>
-        <section>
-            <h2>Produtos da Serralheria Rodrigues</h2>
-            <p>Confira nossos produtos de alta qualidade e feitos sob medida para atender às suas necessidades.</p>
-        </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Serralheria Rodrigues. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-        <section class="feature" aria-labelledby="produtos-lista">
-            <h2 id="produtos-lista">Destaques dos Produtos</h2>
-            <div class="card">
-                <img src="midias/imagem/portao1.jpg.jpg" alt="Portão de ferro resistente e personalizado">
-                <h3>Portão de Ferro Sob Medida</h3>
-                <p>Portões de ferro feitos sob medida, resistentes e duráveis.</p>
-            </div>
-            <div class="card">
-                <img src="midias/imagem/gradedesegurança.jpg" alt="Grades de segurança reforçadas para proteção residencial">
-                <h3>Grades de Segurança</h3>
-                <p>Grades de segurança personalizadas para proteger sua casa.</p>
-            </div>
-            <div class="card">
-                <img src="midias/imagem/cerca1.jpg" alt="Cerca de aço de alta resistência para segurança">
-                <h3>Cerca de Aço</h3>
-                <p>Cercas de aço de alta resistência para sua segurança.</p>
-            </div>
-        </section>
-
-        <section aria-labelledby="video-explicativo">
-            <h2 id="video-explicativo">Assista ao nosso vídeo sobre os produtos</h2>
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/EXEMPLO" 
-                title="Vídeo explicativo sobre os produtos da Serralheria Rodrigues" 
-                frameborder="0" 
-                allowfullscreen>
-            </iframe>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
-    </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
