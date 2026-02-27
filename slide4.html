@@ -1,139 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore a galeria de imagens da Serralheria Rodrigues e veja nossos produtos em ação, incluindo portões, grades e cercas.">
-    <meta name="keywords" content="galeria, imagens, portões, grades, cercas, serralheria, produtos">
-    <meta name="author" content="Matheus de Souza Rodrigues">
-    <title>Galeria - Serralheria Rodrigues</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Estilos específicos para a galeria */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Estilos para a imagem em tamanho maior (modal) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-content {
-            max-width: 80%;
-            max-height: 80%;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover {
-            color: #ff6b6b;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galeria de projetos da Serralheria Rodrigues." />
+  <meta name="keywords" content="galeria serralheria, projetos, portões, grades, cercas" />
+  <meta name="author" content="Matheus de Souza Rodrigues" />
+  <title>Serralheria Rodrigues | Galeria</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Serralheria Rodrigues</h1>
-            <nav aria-label="Menu principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="slide1.html">Serviços</a></li>
-                    <li><a href="slide2.html">Orçamento</a></li>
-                    <li><a href="slide3.html">Produtos</a></li>
-                    <li><a href="slide4.html" aria-current="page">Galeria</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <main>
-        <h2>Galeria de Imagens</h2>
-        <p>Veja abaixo alguns dos nossos projetos realizados. Clique nas imagens para ampliá-las.</p>
-        <div class="gallery">
-            <!-- Imagens da galeria -->
-            <img src="midias/imagem/portaodeferro.jpg" alt="Portão de Ferro personalizado" onclick="openModal(this)">
-            <img src="midias/imagem/grade1.jpg" alt="Grade de Segurança reforçada" onclick="openModal(this)">
-            <img src="midias/imagem/cerca1.jpg" alt="Cerca de Aço resistente" onclick="openModal(this)">
-            <!-- Adicione mais imagens conforme necessário -->
-        </div>
-    </main>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">Serralheria Rodrigues</h1>
+      <nav aria-label="Menu principal" class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="slide1.html">Serviços</a></li>
+          <li><a href="slide2.html">Orçamento</a></li>
+          <li><a href="slide3.html">Produtos</a></li>
+          <li><a href="slide4.html" aria-current="page">Galeria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <div id="myModal" class="modal" role="dialog" aria-labelledby="modalImg" aria-hidden="true">
-        <span class="close" onclick="closeModal()" aria-label="Fechar modal">&times;</span>
-        <div class="modal-content">
-            <img id="modalImg" src="" alt="Imagem ampliada">
-        </div>
+  <main id="conteudo" class="section">
+    <div class="container">
+      <h2>Galeria de Projetos</h2>
+      <p class="lead">Clique em uma imagem para ampliar.</p>
+
+      <div class="gallery-grid">
+        <button class="gallery-item" type="button" data-gallery-trigger>
+          <img class="zoom" src="midias/imagem/portaodeferro.jpg" alt="Portão de ferro personalizado" loading="lazy" />
+        </button>
+        <button class="gallery-item" type="button" data-gallery-trigger>
+          <img class="zoom" src="midias/imagem/grade1.jpg" alt="Grade de segurança reforçada" loading="lazy" />
+        </button>
+        <button class="gallery-item" type="button" data-gallery-trigger>
+          <img class="zoom" src="midias/imagem/cerca1.jpg" alt="Cerca de aço resistente" loading="lazy" />
+        </button>
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues.</p>
-    </footer>
+    <div id="galleryModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle" aria-hidden="true">
+      <div class="modal-content modal-content-gallery">
+        <button class="close" type="button" aria-label="Fechar imagem">&times;</button>
+        <h3 id="galleryModalTitle">Imagem ampliada</h3>
+        <img id="galleryModalImage" src="" alt="" />
+      </div>
+    </div>
+  </main>
 
-    <script>
-        // Script para abrir modal
-        function openModal(element) {
-            const modal = document.getElementById("myModal");
-            const modalImg = document.getElementById("modalImg");
-            modalImg.src = element.src;
-            modalImg.alt = element.alt;
-            modal.classList.add("show");
-            modal.setAttribute("aria-hidden", "false");
-        }
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Serralheria Rodrigues. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-        // Script para fechar modal
-        function closeModal() {
-            const modal = document.getElementById("myModal");
-            modal.classList.remove("show");
-            modal.setAttribute("aria-hidden", "true");
-        }
-    </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
