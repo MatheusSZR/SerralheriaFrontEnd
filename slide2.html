@@ -1,64 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solicite seu orçamento personalizado na Serralheria Rodrigues. Envie seu pedido de forma simples e rápida.">
-    <meta name="keywords" content="orçamento, serralheria, portões, grades, produtos de ferro, serviços de serralheria">
-    <meta name="author" content="Matheus de Souza Rodrigues">
-    <title>Orçamento - Serralheria Rodrigues</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Solicite um orçamento rápido na Serralheria Rodrigues." />
+  <meta name="keywords" content="orçamento serralheria, portões, grades, cercas" />
+  <meta name="author" content="Matheus de Souza Rodrigues" />
+  <title>Serralheria Rodrigues | Orçamento</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Serralheria Rodrigues</h1>
-            <nav aria-label="Menu principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="slide1.html">Serviços</a></li>
-                    <li><a href="slide2.html" aria-current="page">Orçamento</a></li>
-                    <li><a href="slide3.html">Produtos</a></li>
-                    <li><a href="slide4.html">Galeria</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <main>
-        <section aria-labelledby="solicitar-orcamento">
-            <h2 id="solicitar-orcamento">Solicite seu Orçamento</h2>
-            <p>Na Serralheria Rodrigues, você pode solicitar seu orçamento de forma simples e rápida. Basta preencher o formulário abaixo.</p>
-        </section>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1 class="brand">Serralheria Rodrigues</h1>
+      <nav aria-label="Menu principal" class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="slide1.html">Serviços</a></li>
+          <li><a href="slide2.html" aria-current="page">Orçamento</a></li>
+          <li><a href="slide3.html">Produtos</a></li>
+          <li><a href="slide4.html">Galeria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- Botão para abrir o modal -->
-        <button id="openModalBtn" aria-controls="cadastroModal" aria-expanded="false">Abrir Cadastro</button>
+  <main id="conteudo" class="section">
+    <div class="container narrow">
+      <h2>Solicite seu orçamento</h2>
+      <p class="lead">Clique no botão abaixo e envie os detalhes do seu projeto para receber um atendimento personalizado.</p>
+      <button id="openModalBtn" class="btn btn-primary" type="button" aria-controls="cadastroModal" aria-expanded="false">
+        Abrir cadastro
+      </button>
+    </div>
 
-        <!-- Modal -->
-        <div id="cadastroModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-            <div class="modal-content">
-                <button class="close" aria-label="Fechar modal">&times;</button>
-                <h3 id="modalTitle">Cadastro de Orçamento</h3>
-                <form action="processar_orcamento.php" method="POST">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <div id="cadastroModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-content">
+        <button class="close" type="button" aria-label="Fechar modal">&times;</button>
+        <h3 id="modalTitle">Cadastro de Orçamento</h3>
+        <form class="form-grid" action="#" method="POST">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autofocus />
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu email" required />
 
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Descreva o que você precisa" required></textarea>
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
 
-                    <button type="submit">Enviar Orçamento</button>
-                </form>
-            </div>
-        </div>
-    </main>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o que você precisa" required></textarea>
 
-    <footer>
-        <p>&copy; Trabalho de desenvolvimento front-end - Matheus de Souza Rodrigues</p>
-    </footer>
+          <button type="submit" class="btn btn-primary">Enviar orçamento</button>
+        </form>
+      </div>
+    </div>
+  </main>
 
-    <script src="js/script.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Serralheria Rodrigues. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
